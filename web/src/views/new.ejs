@@ -1,0 +1,64 @@
+<% layout('layouts/boilerplate.ejs') %>
+<div class="container">
+  <h2 class="text-center mt-3">Novo Produto</h2>
+  <form action="/products" method="POST">
+    <div class="mb-3">
+      <label for="name" class="form-label">Nome do Produto</label>
+      <input type="text" class="form-control" id="name" name="product[name]" />
+    </div>
+    <div class="mb-3">
+      <div class="row">
+        <div class="col">
+          <label for="category" class="form-label">Categoria</label>
+          <select name="product[category]" id="category" class="form-select" aria-label="Default select example">
+            <option selected>Escolha uma categoria</option>
+            <option name="product[category]" value="feminino">Feminino</option>
+            <option name="product[category]" value="masculino">Masculino</option>
+            <option name="product[category]" value="infantil">Infantil</option>
+          </select>
+        </div>
+        <div class="col">
+          <label for="rating" class="form-label">Rating</label>
+          <select name="product[rating]" id="rating" class="form-select" aria-label="Default select example">
+            <option selected>Rating</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <div class="row">
+        <div class="col">
+          <label for="price" class="form-label">Preço</label>
+          <div class="input-group">
+            <span class="input-group-text">R$</span>
+            <input name="product[price]" id="price" type="number" class="form-control" />
+          </div>
+        </div>
+        <div class="col">
+          <label for="imgurl" class="form-label">Imagem</label>
+          <div class="input-group">
+            <span class="input-group-text">IMG URL</span>
+            <input name="product[imageUrl]" id="imgurl" type="text" class="form-control" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-floating mb-3">
+      <textarea
+        class="form-control"
+        placeholder="Leave a comment here"
+        id="floatingTextarea"
+        style="height: 200px"
+        name="product[description]"
+      ></textarea>
+      <label for="floatingTextarea">Descrição</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Criar</button>
+  </form>
+</div>

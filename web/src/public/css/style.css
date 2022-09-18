@@ -1,0 +1,229 @@
+.home-button {
+  font-size: 0.8rem;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 0.75em 1.875em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+.home-button:hover,
+.home-button:active {
+  background-color: rgb(252 155 52);
+}
+
+.navbar-logo {
+  width: 6rem;
+}
+
+.navbar {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  align-self: center;
+  margin-left: 0.5rem;
+  text-transform: uppercase;
+  /* transition: 0.25s ease-in-out; */
+}
+
+.nav-link-text:hover,
+.nav-link-text:active {
+  color: #fc9b34;
+  cursor: pointer;
+}
+
+/* navbar mobile */
+
+.bg-light .navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+.navbar-icon {
+  font-size: 1.5rem;
+  padding: 0.08rem;
+  cursor: pointer;
+  color: black;
+}
+
+/* .navbar-icon:hover,
+.navbar-icon:active {
+} */
+
+#home {
+  background-image: url("../images/kristina-petrick-liJ5irOt8BM-unsplash.jpg");
+  max-width: 100%;
+  height: 80vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  object-fit: scale-down;
+}
+
+#home h2 {
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+#home h1 {
+  font-size: 5rem;
+  font-weight: 900;
+}
+
+@media only screen and (max-width: 600px) {
+  #home {
+    height: 40vh;
+    background-image: none;
+    background-color: #fff;
+  }
+}
+
+.home-title-two {
+  text-transform: uppercase;
+  text-decoration: underline solid;
+}
+
+#new .new-product {
+  position: relative;
+}
+#new .new-product .details {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+#new .new-product:hover .details {
+  cursor: pointer;
+  background-color: rgba(245, 178, 178, 0.5);
+}
+
+#new .new-product .details button {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: red;
+  background: none;
+  text-transform: uppercase;
+  border: none;
+  border-bottom: 1px solid red;
+  padding: 0.03em;
+  transform: translateY(70px);
+}
+
+#new .new-product .details button:hover,
+#new .new-product .details button:active {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+#new .new-product:nth-child(1) .details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+}
+
+#new .new-product:nth-child(2) .details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#new .new-product:nth-child(3) .details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+/* Products */
+
+.product {
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.product img {
+  object-fit: cover;
+  aspect-ratio: 1;
+  object-position: center;
+  transition: 0.3s all;
+}
+.product:hover img {
+  opacity: 0.7;
+}
+
+.product .buy-btn {
+  transition: all 0.3s ease;
+  transform: translateY(0.2rem);
+  opacity: 0;
+}
+.product:hover .buy-btn {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+hr {
+  width: 30px;
+  height: 5px;
+  background-color: red;
+}
+
+.small-img-group {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.small-img {
+  width: 100%;
+  flex-basis: 24%;
+  cursor: pointer;
+}
+
+.product-show input {
+  width: 50px;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.product-show input:focus {
+  outline: none;
+}
+
+.product-show .buy-btn {
+  font-size: 0.8rem;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 0.75em 1.875em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.product-show .buy-btn:hover,
+.product-show .buy-btn:active {
+  background-color: rgb(252 155 52);
+}

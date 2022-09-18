@@ -16,15 +16,15 @@ function randomNumber(minNum, maxNum) {
 const seedDB = async () => {
   await Product.deleteMany({});
 
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 50; i++) {
+    const categories = ["feminino", "masculino", "infantil"];
     const product = new Product({
-      name: "Camiseta Stranger Things Hellfire Club",
-      category: "Roupas Masculinas",
+      name: `Produto ${i + 1}`,
+      category: categories[randomNumber(0, categories.length)],
       price: `${randomNumber(25, 300)}`,
-      description: "Camiseta com impressão digital",
-      brand: "Jordan",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       rating: `${randomNumber(0, 5)}`,
-      numReviews: `${randomNumber(0, 200)}`,
       imageUrl:
         "https://images-americanas.b2w.io/produtos/5527602868/imagens/camiseta-stranger-thinks-hellfire-club-100-algodao/5527602884_1_large.jpg",
     });

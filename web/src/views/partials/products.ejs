@@ -1,0 +1,20 @@
+<section class="featured my-5">
+  <div class="container text-center my-5">
+    <h2 class="">NOVIDADES PRA VOCÊ</h2>
+    <hr class="mx-auto" />
+  </div>
+  <div class="row mx-auto container-fluid">
+    <% products.forEach(product => { %>
+    <div class="product text-center col-lg-3 col-md-4 col-12">
+      <a href="/products/<%= product._id %>"><img class="img-fluid mb-3" src="<%= product.imageUrl %>" alt="" /></a>
+      <div class="rating">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+        ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+      </div>
+      <h4 class="product-name"><%= product.name %></h4>
+      <h5 class="product-price">R$ <%= product.price %></h5>
+      <a href="/products/<%= product._id %>" class="buy-btn btn btn-dark" href="#" role="button">Comprar Agora</a>
+    </div>
+    <% }) %>
+  </div>
+</section>
